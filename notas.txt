@@ -21,3 +21,11 @@ donde realicemos el filtrados podemos realizar el filrado.
 cuando se especifica en la funcion va a requerir de un parametro pero no en la ruta (decorador/url), fast api
 va a detectarlo como un parametro query
 
+
+>Metodo post
+para el metodo post dentro de la funcion hay que especificar la estrucutra de datos con la cual estemos trabajando
+asi mismo para que la respuesta de esta sea un body y no como un parametro query, a los paramtros hay que añadirles que son de clase Body()
+
+>metodo delete y metodo put
+no son muy diferentes, el metodo delete es basicamente buscar pero en lugar de imprimir es borrar
+el metodo put es el metodo post pero en luggar de crear nuevops registros actualiza los ya existentes
