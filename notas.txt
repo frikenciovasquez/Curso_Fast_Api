@@ -1,0 +1,13 @@
+#Documentacion con swagger.
+fast api integra una documentacion autogenerada con swagger que explica que va a tener nuestros endpoints 
+basandose en los estandares openAPI
+
+dentro del mundo del interneto el protocolo https es aque que se define como el conjunto de metodos de peticion
+que indican al navegador que acciones se desea realizar dentro del servidor 
+
+los metodos principales del protocolo https son:
+    -post: crear un nuevo recurso
+    -put: editar un recurso
+    -get : consultar la informacion de un recurso
+    -delete :eliminar un recurso.
+basicamente podemos hacer un CRUD
