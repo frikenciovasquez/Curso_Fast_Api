@@ -11,3 +11,13 @@ los metodos principales del protocolo https son:
     -get : consultar la informacion de un recurso
     -delete :eliminar un recurso.
 basicamente podemos hacer un CRUD
+
+>metodo Get
+#parametros de ruta
+dentro del parametro del decorador podemos enviar parametros para realizar filtrados, esto junto a una funcion
+donde realicemos el filtrados podemos realizar el filrado.
+
+#parametros query
+cuando se especifica en la funcion va a requerir de un parametro pero no en la ruta (decorador/url), fast api
+va a detectarlo como un parametro query
+
