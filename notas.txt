@@ -64,3 +64,15 @@ con la opcion de response_model, en la cual debemos especificarel tipo de respue
 de igual forma a la funcion se debe especificar la salida al igual que se realizo con el 
 
 # Codigo de estados
+
+los codigos de estado nos da la informacion si una peticion se ha ejecutado correctamente o no, estos codigos de estado 
+realizan mediante pasando al parametro de ruta mediante el status_code, de igual forma en el JsonResponse utilizando el 
+status_code pasandole el codigo que deberia retornar la funcion
+
+# flujos de autenticacion
+
+el flujo de autenticacion es todo el proceso que realizaremos desde la creacion y validacion de tokens a peticion 
+del usuario para el acceso a la ruta que esta solicitando, esto se realizara mediante la libreria pyJWT( python Json web token),
+    - un token jwt es un objeto de seguridad que se utiliza para autenticar a los usuarios en aplicaciones web y moviles
+    - estos tokens se envian al cliente que los utiliza para demostrar su identidad frente a recursos protegidos del servidor
+    
