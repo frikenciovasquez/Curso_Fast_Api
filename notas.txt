@@ -29,3 +29,38 @@ asi mismo para que la respuesta de esta sea un body y no como un parametro query
 >metodo delete y metodo put
 no son muy diferentes, el metodo delete es basicamente buscar pero en lugar de imprimir es borrar
 el metodo put es el metodo post pero en luggar de crear nuevops registros actualiza los ya existentes
+
+# creacion de esquemas
+
+la creacion de esquemas, es crear una clase con los el modelo de datos que vamos a usar, medianmte la libreria pydantic el modulo Basemodel()
+es el que nos permite esta accion, poder crear un modelo base de datos y pasarlo a las funciones/ metodos como el argumento de como va  ser el modelo
+de datos con el cual va a trabajar
+
+# validacion de datos
+las validaciones son la manera en la que podemos nostros realizar control sobre el tipo de datos que se ingresan en nuestros formularios
+esto mediante la clase Field de pydantic la cual nos permite especificar las condiciones que tienen que cumplir
+los datos para que sean validos por nuestro programa, 
+otra cualidad que podemos realizar es dentro de nuestros modelo podemos crear esquemas default, asi de esta forma no es necesario 
+pasarlo como atributo si no creando una clase dentro del modelo que nos defina este esquema por defecto
+
+#Validacion de parametros
+
+al igual como se realizo con la validacion de los datos, igualmente se puede realizar una validacion
+a los parametros query y los parametros de ruta.
+la validacion de los parametros de ruta, se realiza importando la libreria propia de fastApi llamada path
+esta validacion se realiza pasandole los limites dentro de los id por ejemplo en el metodo get 
+al igual que para los parametros de ruta se usa la clase path para los parametros query se importa el modulo Query
+y de igual forma se incluye en el parametro de string incluyendo los limites
+
+# tipos de respuesta
+
+aparte de las respuestas de html, fast api nos permite de igualforma otros tipos de respuesta, por ejemplo
+    -JsonResponse: esta nos permite enviar el contenido en formato Json al cliente, esta es por defecto
+    la respuesta de fastApi
+
+a fastApi podemos especificarle el modelo de respusta que vamos a obtener, esto se realiza especificando en el parametro de la ruta
+con la opcion de response_model, en la cual debemos especificarel tipo de respuesta que queremos que sea dada.
+        - si queremos que retorne un listado hayu que importar desde typing esta clase  al igual que se hizo con el optional ,
+de igual forma a la funcion se debe especificar la salida al igual que se realizo con el 
+
+# Codigo de estados
