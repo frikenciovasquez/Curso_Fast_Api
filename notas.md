@@ -105,4 +105,22 @@ los pasos son los siguientes:
 2. _add_ este objeto es el que añade los datos a nueastra session de base de datos
 3. _commit_ realizamos commit a nuestra base de datos .
 
-> consulta de datos
+> consulta de datos, creacion , elminacion y modificacion
+
+    tanto la consulta, modificacion y eliminacion de datos utilizando el modelo ORM no tienen mucha diferencia uno de otro
+        1. lo principal es el metodo de creacion (post), donde tener en cuenta que siempre debemos iniciar una sesion con nuestra base de datos, todo esto mediante la classe session(),
+            el segundo punto a tener en cuenta es que en este punto los datos los tenemos estructurados, es diferente el modelo de datos que ya teniamos al modelo orm al cual estamos creando nuestros datos, dicho esto (esto hecho en la practica debo investigar si hay mas formas)   basicamente descomprimir el diccionario de datos que tenemos al modelo orm, añadirlos a la session de nuestra base de datos y realizar commit,
+        2. para el metodo get para consultar el contenido en nuestra base de datos, siempre creando una sesion de esta, session posee el metodo query, el cual todas las sentencias select generadas por sqlalchemy orm son construidas por el objeto query
+        este objeto tiene distintos metodos los cuales nos serviran para delete, metodos como filter tambien sirve para pasos iniciales para el metodo put
+
+        3. para los metodos delete y put o metodos donde se agrega y/o cambia elementos de la base de datos es importante recordar realizar el commit para que los cambios hechos en la session de la base de datos se realicen en la base de datos
+
+> Manejo de Errores y midelwares
+
+Un middleware es una funcion que trabaja con cada peticion antes de que sea procesada por cualquier operacion de ruta especifica, y tambien con cada respuesta antes de devolverla el 
+
+> creacion de routers
+ fast api da la posibilidad de dividir la aplicacion en modulos  mediante routers para dividir el codigo en distintos archivos 
+
+> servicios para consulta de datos
+    la implementacion de servicios es una practica para separar un poco el codigo de la aplicacion, en resumen atomizar mas el codigo pasi para que sea presentable, y mantenible en el tiempo 
